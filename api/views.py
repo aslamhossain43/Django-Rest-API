@@ -11,6 +11,11 @@ class ListEmployeeAPIView(ListAPIView):
     queryset = Employee.objects.all()
     serializer_class = EmployeeSerializer
 
+class EmployeeAPIView(ListAPIView):
+    """This endpoint single Employee from the database"""
+    queryset = Employee.objects.all()
+    serializer_class = EmployeeSerializer
+
 class CreateEmployeeAPIView(CreateAPIView):
     """This endpoint allows for creation of a Employee"""
     queryset = Employee.objects.all()
